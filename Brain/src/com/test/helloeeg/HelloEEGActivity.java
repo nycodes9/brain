@@ -84,11 +84,12 @@ public class HelloEEGActivity extends Activity {
             case TGDevice.MSG_RAW_DATA:	  
             		int raw1 = msg.arg1;
             		textView.append("Got raw: " + raw1 + "\n");
-            		textView.append("Got raw: " + raw1 + "\n");
+            		Log.e("HelloEEG", "Raw: " + raw1 + "\n");
             	break;
             case TGDevice.MSG_HEART_RATE:
         		textView.append("Heart rate: " + msg.arg1 + "\n");
-                break;
+        		Log.e("HelloEEG", "heart rate: " + msg.arg1 + "\n");
+        		break;
             case TGDevice.MSG_ATTENTION:
             		int attention = msg.arg1;
             		textView.append("Attention: " + attention + "\n");
@@ -101,9 +102,11 @@ public class HelloEEGActivity extends Activity {
             	break;
             case TGDevice.MSG_BLINK:
             		textView.append("Blink: " + msg.arg1 + "\n");
+            		Log.e("HelloEEG", "blink: " + msg.arg1 + "\n");
             	break;
             case TGDevice.MSG_RAW_COUNT:
             		textView.append("Raw Count: " + msg.arg1 + "\n");
+            		Log.e("HelloEEG", "attention: " + msg.arg1 + "\n");
             	break;
             case TGDevice.MSG_LOW_BATTERY:
             	Toast.makeText(getApplicationContext(), "Low battery!", Toast.LENGTH_SHORT).show();
